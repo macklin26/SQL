@@ -1,0 +1,28 @@
+--Create TV store database
+
+CREATE TABLE store ( id integer, upc integer primary key, name text, quantity integer, price integer);
+
+insert into store values (20, 272, "20 inch tv", 10, 199);
+insert into store values (30, 333, "30 inch tv", 7, 1329);
+insert into store values (40, 444, "40 inch tv", 13, 159);
+insert into store values (50, 555, "50 inch tv", 11, 2979);
+insert into store values (55, 5555, "55 inch tv", 12, 2355);
+insert into store values (60, 6600, "60 inch tv", 11, 399);
+insert into store values (70, 7777, "70 inch tv", 3, 2500);
+insert into store values (75, 7575, "75 inch tv", 7, 1659);
+insert into store values (72, 7272, "72 inch tv", 6, 2755);
+insert into store values (10, 1010, "10 inch tv", 7, 130);
+insert into store values (15, 1515, "15 inch tv", 9, 123);
+insert into store values (22, 222, "22 inch tv", 9, 299);
+insert into store values (33, 3333, "33 inch tv", 2, 1340);
+insert into store values (80, 8888, "80 inch tv", 2, 99);
+insert into store values (100, 10000, "99 inch tv", 3, 209);
+
+--display the database ordered by price.
+select * from store order by price desc;
+
+--display the datatbase ordered by quantity available
+select * from store order by quantity desc;
+
+--display the datatbase total quantity, and average price of TV
+select sum(quantity), avg(price) from store;
